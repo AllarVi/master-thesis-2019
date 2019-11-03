@@ -1,4 +1,6 @@
-ülesande püstitus
+# Ülesandepüstitus
+
+[juhend](https://courses.cs.ttu.ee/pages/%C3%9Clesandep%C3%BCstitus)
 
 1-2 lk.
 
