@@ -12,8 +12,11 @@ the Back Handspring: A case study.
 ACROBATIC GYMNASTICS: A CASE STUDY WITH A YOUTH
 TUMBLING GYMNAST
 [7] A markerless motion capture technique for sport performance analysis and injury prevention: Toward a ‘big data’, machine learning future - J. Alderson
-[8] Flowing ConvNets for Human Pose Estimation in Videos
-[9] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields 
-[10] OpenPose: Realtime Multi-Person 2D Pose
+[8] HUMAN ACTIVITY RECOGNITION AND
+GYMNASTICS ANALYSIS THROUGH
+DEPTH IMAGERY
+[9] Flowing ConvNets for Human Pose Estimation in Videos
+[10] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields 
+[11] OpenPose: Realtime Multi-Person 2D Pose
 Estimation using Part Affinity Fields
-[11] Towards the Notion of Average Trajectory of the Repeating Motion of Human Limbs
+[12] Towards the Notion of Average Trajectory of the Repeating Motion of Human Limbs
