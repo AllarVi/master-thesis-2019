@@ -36,10 +36,14 @@ Magistritöö praktilise osa üldine ülesehitus kulgeb järgnevalt:
 2) Seejärel, kasutab autor vabatarkvaralist lahendust OpenPose atleedi skeleti digitaalseks salvestamiseks.
 3) Skeleti digitaalsesest salvestusest tuleb vajalikud andmed ekstraheerida ja kasutada neid harjutuse **tuvastusalgoritmi** sisenditena. 
 4) Tuvastusalgoritmi tulemused tuleb seejärel tõlgendada. Lisaks, võimlemisoskuste paremaks interpreteerimiseks plaanib autor rakendada **keskmise trajektoori** meetodit[11]. Kaalutakse ka alternatiivseid meetodeid.
-5) Väljatöötatud lahendus pakutakse katsetamiseks võimlemistreeneritele ja võimlejatele. Kui lahendus loetakse praktiliselt kasutatavaks, siis võib lugeda lahenduse õnnestunuks.
+5) Väljatöötatud lahendus pakutakse katsetamiseks võimlemistreeneritele ja võimlejatele. Kui lahendus läbib valitud valideerimiskriteeriumid, siis võib lahenduse lugeda õnnestunuks.
 6) Viimase osana arutleb autor tulemuste üle ja pakub võimalusi lahenduse täiendamiseks.
 
+Valmis magistritöö tuumaks on uurida, millised digitaalselt salvestatud liikumise parameetrid ja millised masinõppelised mudelid saavutavad maksimaalse täpsusega tulemused võimlemisharjutuste tuvastamisel. Tuvastusalgoritmi valikul alustatakse klassikaliste masinõppeliste meetoditega (k-means, Decision Trees) ning lisaks kaalutakse ka sügavate närvivõrkude rakendamist. Valitava algoritmi valik sõltub andmetest, mis kogutakse pärast liikumiste digitaalset salvestamist.
 
+## Valideerimine
+
+Täpsemad meetodid võimlemisharjutuste tuvastusalgoritmi valideerimiseks selguvad töö käigus. Lihtsamate võimlemisharjutuste valideerimisel on üheks võimaluseks võrrelda OpenPose'iga salvestatud parameetrite ja valitud tuvastusalgoritmi tulemusi mõne olemasoleva ja kättesaadava liikumise salvestamise vahendi (motion capture) tulemustega. Raskemate ja rohkem ruumi vajavate võimlemisharjutuste tuvastuste valideerimiseks saab kasutada tuvastusalgoritmi tulemuste ja video abil kasutaja manuaalsete sisendite võrdlemist. See tähendab, et kui kasutaja tuvastatud võimlemisharjutus kattub tuvastualgoritmi poolt pakutud tulemusega, siis võib tuvastuse lugeda õnnestunuks.
 
 
 
