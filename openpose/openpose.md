@@ -6,6 +6,8 @@
 
 ## [Installation](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md#installation)
 
+make -j`sysctl -n hw.logicalcpu`
+
 ## Reinstallation
 
 ### [Update project and remove old installation](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md#reinstallation)
@@ -15,3 +17,11 @@
 3) make uninstall
 4) rm -r build/
 5) In CMake GUI, click on File -> Delete Cache
+
+## Install python
+
+cd build/python
+sudo make install
+
+vim ~/.zshrc
+export PYTHONPATH=/path/to/openpose/build/python
