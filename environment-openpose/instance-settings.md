@@ -1,0 +1,29 @@
+total 193924
+drwxr-xr-x 16 ubuntu ubuntu      4096 Dec  8 08:57 .
+drwxr-xr-x  3 root   root        4096 Dec  1 11:51 ..
+-rw-------  1 ubuntu ubuntu     23429 Dec  7 18:43 .bash_history
+-rw-r--r--  1 ubuntu ubuntu       220 Apr  4  2018 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu      4110 Dec  5 21:20 .bashrc
+drwx------  3 ubuntu ubuntu      4096 Dec  1 13:37 .cache
+drwxrwxr-x  3 ubuntu ubuntu      4096 Dec  4 21:13 .cmake
+drwx------  3 ubuntu ubuntu      4096 Dec  1 12:06 .gnupg
+drwxr-xr-x  5 ubuntu ubuntu      4096 Dec  1 15:13 .ipython
+drwx------  2 ubuntu ubuntu      4096 Dec  3 18:10 .jupyter
+drwxrwxr-x  3 ubuntu ubuntu      4096 Dec  1 13:38 .local
+drwx------  3 ubuntu ubuntu      4096 Dec  7 16:48 .nv
+-rw-r--r--  1 ubuntu ubuntu       807 Apr  4  2018 .profile
+drwxrwxr-x 14 ubuntu ubuntu      4096 Dec  1 13:37 .pyenv
+-rw-------  1 ubuntu ubuntu      2587 Dec  7 16:08 .python_history
+drwx------  2 ubuntu ubuntu      4096 Dec  1 11:51 .ssh
+-rw-r--r--  1 ubuntu ubuntu         0 Dec  1 12:22 .sudo_as_admin_successful
+-rw-------  1 ubuntu ubuntu      8941 Dec  7 16:54 .viminfo
+-rw-rw-r--  1 ubuntu ubuntu       165 Dec  4 21:18 .wget-hsts
+drwxrwxr-x  2 ubuntu ubuntu      4096 Dec  1 13:40 certs
+drwxrwxr-x 15 ubuntu ubuntu      4096 Dec  4 21:35 cmake-3.16.0
+-rw-rw-r--  1 ubuntu ubuntu   9107654 Nov 26 15:40 cmake-3.16.0.tar.gz
+-rw-rw-r--  1 ubuntu ubuntu     28408 Dec  8 08:57 history.txt
+-rw-rw-r--  1 ubuntu ubuntu 189312848 Oct 28 00:21 libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb
+drwxrwxr-x  4 ubuntu ubuntu      4096 Dec  7 16:34 notebooks
+drwxrwxr-x 14 ubuntu ubuntu      4096 Dec  5 21:34 openpose
+drwxrwxr-x  2 ubuntu ubuntu      4096 Dec  7 18:26 openpose-sample-videos
+
