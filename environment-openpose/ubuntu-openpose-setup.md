@@ -1,18 +1,12 @@
 # Install Openpose on Ubuntu
 
-## 1) Download Ubuntu 18.04 VDI
-
-Create new vm in virtualbox using the vdi
-
-Password – osboxes.org
-
-## 2) Install Guest Additions
+## 1) Get CUDA version
 
 nvcc --version
 
-sudo apt install nvidia-cuda-toolkit
+/usr/local/cuda/bin/nvcc --version
 
-## 3) Install OpenPose
+## 2) Install OpenPose
 
 git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
 
@@ -23,21 +17,32 @@ tar xf cmake-3.13.4.tar.gz
 cd cmake-3.13.4 && ./configure && make && sudo make install
 
 # Basic
+
 sudo apt-get --assume-yes update
 sudo apt-get --assume-yes install build-essential
+
 # OpenCV
+
 sudo apt-get --assume-yes install libopencv-dev
+
 # General dependencies
+
 sudo apt-get --assume-yes install libatlas-base-dev libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
 
 sudo apt-get --assume-yes install --no-install-recommends libboost-all-dev
+
 # Remaining dependencies, 14.04
+
 sudo apt-get --assume-yes install libgflags-dev libgoogle-glog-dev liblmdb-dev
+
 # Python3 libs
+
 sudo apt-get --assume-yes install python3-setuptools python3-dev build-essential
 sudo apt-get --assume-yes install python3-pip
 sudo -H pip3 install --upgrade numpy protobuf opencv-python
+
 # OpenCL Generic
+
 sudo apt-get --assume-yes install opencl-headers ocl-icd-opencl-dev
 sudo apt-get --assume-yes install libviennacl-dev   
 
@@ -50,6 +55,8 @@ sudo tar -xzf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local
 rm cudnn-8.0-linux-x64-v5.1.tgz && sudo ldconfig
 
 # Build Openpose (in ../openpose/build/)
+
+mkdir build
  
 cmake .. 
 
