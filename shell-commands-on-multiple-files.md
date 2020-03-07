@@ -1,4 +1,4 @@
-# Some useful bash commands
+# Shell commands on multiple files
 
 ## Echo files
 
