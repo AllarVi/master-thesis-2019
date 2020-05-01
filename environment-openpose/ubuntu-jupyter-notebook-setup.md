@@ -31,9 +31,7 @@ sudo apt-get update; sudo apt-get install --no-install-recommends make build-ess
 
 pyenv install --list
 
-pyenv install 3.8.0
-
-https://github.com/pyenv/pyenv-virtualenv
+pyenv install 3.7.2
 
 git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
@@ -41,7 +39,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
 source ~/.bashrc
 
-pyenv virtualenv 3.8.0 jupyter-notebook
+pyenv virtualenv -p python3.7 3.7.2 openpose-extract
 
 https://13.48.126.113:8888/
 

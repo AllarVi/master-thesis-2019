@@ -6,11 +6,13 @@ nvcc --version
 
 /usr/local/cuda/bin/nvcc --version
 
-## 2) Install OpenPose
+## 2) Install and use Python virtualenv
+
+## 3) Install OpenPose
+
+cd ~/
 
 git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
-
-https://developer.nvidia.com/cuda-downloads
 
 wget -c "https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz"
 tar xf cmake-3.13.4.tar.gz
@@ -49,15 +51,40 @@ sudo apt-get --assume-yes install libviennacl-dev
 # Openpose Models
 cd openpose/models && ./getModels.sh
 
+CUDNN_URL="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.2_20191118/cudnn-10.2-linux-x64-v7.6.5.32.tgz"
+
 CUDNN_URL="http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz"
+
 wget -c ${CUDNN_URL}
+
+sudo tar -xzf cudnn-10.2-linux-x64-v7.6.5.32.tgz -C /usr/local
+
 sudo tar -xzf cudnn-8.0-linux-x64-v5.1.tgz -C /usr/local
+
+rm cudnn-10.2-linux-x64-v7.6.5.32.tgz && sudo ldconfig
+
 rm cudnn-8.0-linux-x64-v5.1.tgz && sudo ldconfig
 
 # Build Openpose (in ../openpose/build/)
 
 mkdir build
+cd build
  
 cmake .. 
 
+vim CMakeCache.txt
+turn BUILD_PYTHON to ON
+
 make -j`nproc`
+
+## Install OpenPose Python version
+
+cd build/python
+make install
+
+pip install opencv-python-headless
+
+vim ~/.bashrc
+export PYTHONPATH=/home/ubuntu/openpose/build/python
+source ~/.bashrc
+

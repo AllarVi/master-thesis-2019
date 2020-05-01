@@ -1,6 +1,6 @@
 # Data preparation
 
-Automatic recognition of acrobatic human activity requires reference or training data to train our machine to recognize some acrobatic movements, such as backflips or back handsprings. Since these types of movements are performed for a duration of time, just still images of activities are not sufficient. We need the activities recorded in some kind of motion picture format. The device used to capture activities is a GoPro Hero7 Black, with the following basic settings:
+Automatic recognition of gymnastic human activity requires reference or training data to train our machine to recognize some acrobatic movements, such as backflips or back handsprings. Since these types of movements are performed for a duration of time, just still images of activities are not sufficient. We need the activities recorded in some kind of motion picture format. The device used to capture activities is a GoPro Hero7 Black, with the following basic settings:
 
 * RES - 1080
 * FPS - 60
