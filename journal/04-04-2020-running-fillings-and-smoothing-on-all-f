@@ -2,7 +2,7 @@
 
 First I run filling on all input frames directories
 
-Then I take the output log and remove frames dirs where some body parts are not available at all.
+Then I take the output log and remove samples where some body parts are not available at all.
 
 The files I'm removing because of missing body parts:
 
