@@ -2,22 +2,16 @@
 
 http://aws.amazon.com
 
-## Instance settings
-
-* Choose AMI -> Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
-* GPU instances -> g4dn.xlarge
-* Storage -> 64GB
-* two "Custom TCP Rules" with port ranges (set source to "Anywhere")
-    - 20-21
-    - 1024-1048
-    - 8888
-
-### Instance specifications
+## Instance specifications
 
 * Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 * g4dn.xlarge (- ECUs, 4 vCPUs, 2.5 GHz, Intel Xeon P-8259L, 16 GiB memory, EBS only)
 * 64GB general purpose SSD
 * $0.558 per On Demand Linux g4dn.xlarge Instance Hour
+* "Custom TCP Rules" with port ranges (set source to "Anywhere")
+    - 20-21
+    - 1024-1048
+    - 8888
 
 ## SSH into instance
 
