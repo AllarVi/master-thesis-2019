@@ -18,7 +18,11 @@ http://aws.amazon.com
 ```
 chmod 600 master-thesis-environment.pem
 
+# Amazon
 ssh -i master-thesis-environment.pem ubuntu@13.48.123.194
+
+# Google Cloud 
+ssh -i ~/.ssh/master-thesis-environment ubuntu@34.105.147.25
 ```
 
 ## Install CUDA
@@ -30,45 +34,43 @@ ssh -i master-thesis-environment.pem ubuntu@13.48.123.194
 sudo apt-get update
 
 # Add NVIDIA package repositories
+
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+
 sudo dpkg -i cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+
 sudo apt-get update
+
 wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+
 sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+
 sudo apt-get update
 
 # Install NVIDIA driver
+
 sudo apt-get install --no-install-recommends nvidia-driver-450
+
 # Reboot. Check that GPUs are visible using the command: nvidia-smi
 
 # Install development and runtime libraries (~4GB)
-sudo apt-get install --no-install-recommends \
+sudo apt-get install -y --no-install-recommends \
     cuda-10-1 \
     libcudnn7=7.6.4.38-1+cuda10.1  \
     libcudnn7-dev=7.6.4.38-1+cuda10.1
-
 
 # Install TensorRT. Requires that libcudnn7 is installed above.
 sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
     libnvinfer-dev=6.0.1-1+cuda10.1 \
     libnvinfer-plugin6=6.0.1-1+cuda10.1
 
-# (Deprecated)
-cd ~ && wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
-
-cd ~ && wget https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.105_418.39_linux.run
-
-# install everything except samples
-sudo sh cuda_10.2.89_440.33.01_linux.run
-
-sudo sh cuda_10.1.105_418.39_linux.run
-
-touch ~/.bash_profile && \
-echo 'export PATH="/usr/local/cuda-10.1/bin:$PATH"' >> ~/.bash_profile && \
-echo 'export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:$LD_LIBRARY_PATH"' >> ~/.bash_profile && \
-echo 'export LD_LIBRARY_PATH="/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"' >> ~/.bash_profile && \
-source ~/.bash_profile
+touch ~/.profile && \
+echo 'export PATH="/usr/local/cuda-10.1/bin:$PATH"' >> ~/.profile && \
+echo 'export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64:$LD_LIBRARY_PATH"' >> ~/.profile && \
+echo 'export LD_LIBRARY_PATH="/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"' >> ~/.profile && \
+source ~/.profile
 
 ```
 
@@ -89,7 +91,7 @@ pasv_min_port=1024
 pasv_max_port=1048
 port_enable=YES
 # Public IP of amazon instance
-pasv_address=13.48.123.194
+pasv_address=34.105.147.25
 pasv_addr_resolve=YES
 
 sudo systemctl restart vsftpd
@@ -107,9 +109,9 @@ git clone https://github.com/AllarVi/pose-estimation-jupyter.git
 ## Install Python
 
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile && \
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile && \
-source ~/.bash_profile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile && \
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile && \
+source ~/.profile
 
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
@@ -151,7 +153,7 @@ ipython
 from IPython.lib import passwd
 passwd()
 Enter password: [Create password and press enter] Verify password: [Press enter]
-'sha1:7c4361bd06df:bdbefcfced9b96a9f343b24515c98044600ab9f9'
+'sha1:dc542de4fb23:8e8785edb5e8fec931e6b81e872d8dcc0b8acf85'
 exit
 
 jupyter notebook --generate-config
@@ -177,7 +179,7 @@ c.IPKernelApp.pylab = 'inline'  # if you want plotting support always in your no
 c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem' #location of your certificate file
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.open_browser = False  #so that the ipython notebook does not opens up a browser by default
-c.NotebookApp.password = u'sha1:7c4361bd06df:bdbefcfced9b96a9f343b24515c98044600ab9f9'  #the encrypted password we generated above
+c.NotebookApp.password = u'sha1:dc542de4fb23:8e8785edb5e8fec931e6b81e872d8dcc0b8acf85'  #the encrypted password we generated above
 # Set the port to 8888, the port we set up in the AWS EC2 set-up
 c.NotebookApp.port = 8888
 
@@ -188,7 +190,7 @@ sudo chown $USER:$USER /home/ubuntu/certs/mycert.pem
 jupyter notebook
 
 // In Safari
-https://13.48.123.194:8888/
+https://34.105.147.25:8888/
 
 
 ```
